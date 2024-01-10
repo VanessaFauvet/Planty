@@ -71,12 +71,7 @@ a {
 }
 
 .slogan {
-    color: #3B8E46;
-    font-size: 38px;
-    font-weight: 800;
-    text-transform: uppercase;
     padding-bottom: 105px;
-    text-align: center;
 }
 
 .energy {
@@ -89,9 +84,69 @@ a {
 }
 
 .section_title {
-    color: #3B8E46;
-    text-align: center;
     padding: 105px 0 17px 0;
-    font-size: 30px;
-    font-weight: 700;
+}
+
+.planty {
+    padding-bottom: 82px;
+}
+
+.gouts {
+    padding-top: 58px;
+}
+
+.legend {
+    padding: 0;
+    margin: 0;
+}
+
+.fruit {
+    width: 393px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+}
+
+.groupe1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 49px;
+    padding-bottom: 40px;
+    background: #ECE2DA;
+    gap: 0;
+}
+
+.groupe2 {
+    background: #ECE2DA;
+    padding-bottom: 47px;
+    gap: 0;
+}
+
+.command_bloc {
+    background: #ECE2DA;
+    padding-bottom: 40px;
+    border-bottom: 0px;
+    border-radius: 100% / 0 0 50% 50%;
+    width: 100%;
+}
+
+.command_button {
+    width: 198px;
+    height: 55px;
+    padding: 9px 57px 9px 56px;
+    justify-content: center;
+    align-items: center;
+}
+
+.avis {
+    margin: 105px 0;
+}
+
+.blocs_avis {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.name {
+    margin-bottom: 11px;
 }
