@@ -143,10 +143,15 @@ a {
 }
 
 .blocs_avis {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .name {
     margin-bottom: 11px;
+}
+
+.cans {
+    width: 100%;
+    margin: 0;
 }
