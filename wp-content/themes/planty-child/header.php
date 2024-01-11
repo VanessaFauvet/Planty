@@ -11,14 +11,15 @@
         <a href="<?php echo home_url('/');?>" class="identity">
 			<img class="logo" src="<?= get_stylesheet_directory_uri()."/images/logo.png" ?>">
         </a>
-        <nav class="main_nav">
-            <p class="subtitle">energy drink</p>
-            <?php wp_nav_menu(array(
-                'theme_location' => 'main',
-                'container' => 'ul', // afin d'éviter d'avoir une div autour
-            )); ?>
-        </nav>
-        <input class="button" type="button" value="Commander">
+        <div class="main_nav">
+            <nav>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'main',
+                    'container' => 'ul', // afin d'éviter d'avoir une div autour
+                )); ?>
+            </nav>
+            <input class="button" type="button" value="Commander">
+        </div>
         
     </header>
     
