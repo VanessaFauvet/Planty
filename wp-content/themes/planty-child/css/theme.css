@@ -71,6 +71,7 @@ a {
     height: 80px;
     color: white;
     margin-left: 60px;
+    border: 0;
 }
 
 /* Accueil */
@@ -190,6 +191,10 @@ a {
     border-bottom: 0px;
     border-radius: 100% / 0 0 50% 50%;
     width: 100%;
+    background-image: url('../images/Group-2.png');
+    background-repeat: no-repeat;
+    background-size: 14%;
+    background-position: top 65px left 100px;
 }
 
 .rencontrer_title, .rencontrer_text {
@@ -211,6 +216,12 @@ a {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 81px;
+    background-image: url('../images/Group-4.png');
+    background-repeat: no-repeat;
+    background-size: 14%;
+    background-position: bottom 0 right 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .member_name {
@@ -231,7 +242,7 @@ a {
 }
 
 .formulaire_contact.wp-container-core-group-layout-5.wp-container-core-group-layout-5 {
-    width: 383px;
+    width: 500px;
 }
 
 .wpcf7-text, .wpcf7-textarea {
@@ -251,6 +262,13 @@ a {
 .wpcf7-textarea {
     margin-top: 13px;
     margin-bottom: 24px;
+    height: 237px;
+}
+
+.formulaire_contact {
+    background-image: url('../images/Group-16.png');
+    background-repeat: no-repeat;
+    background-position: bottom 47px left -30px;
 }
 
 .wpcf7 .btn, input[type="submit"] {
@@ -265,7 +283,13 @@ a {
 }
 
 :where(.is-layout-flex) {
-    gap: 0;
+    gap: none;
+}
+
+/* Formulaire de commande */
+.formulaire_de_commande {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Footer */
