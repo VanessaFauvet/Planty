@@ -18,7 +18,7 @@
                     'container' => 'ul', // afin d'éviter d'avoir une div autour
                 )); ?>
             </nav>
-            <input class="button" type="button" value="Commander">
+            <input class="button" type="button" value="Commander" OnClick="window.location.href='Précommander'">
         </div>
         
     </header>
