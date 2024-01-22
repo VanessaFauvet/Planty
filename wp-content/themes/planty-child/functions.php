@@ -23,29 +23,50 @@ function formulaire_commande() {
     $image_3_url=get_field('image_3', get_the_ID());
     $image_4_url=get_field('image_4', get_the_ID());
     $formulaire=<<<EOD
-    <div class="formulaire_de_commande">
-        <h2>Commander</h2>
-        <div class="parfums">
-            <div class="parfum">
-                <img src="$image_1_url">
+    <div id="command_form">
+        <form method="get" action="">
+            <h2 class="commander_title">Commander</h2>
+            <h3 class="commander_subtitle">Votre commande</h3>
+            <div id="saveurs">
+                <div class="saveur">
+                    <img src="$image_1_url" alt="image de fraises">
+                    <input type="number" name="number" class="number">
+                </div>
+                <div class="saveur">
+                    <img src="$image_3_url" alt="image de quartiers de pamplemousses">
+                    <input type="number" name="number" class="number">
+                </div>
+                <div class="saveur">
+                    <img src="$image_2_url" alt="image de framboises">
+                    <input type="number" name="number" class="number">
+                </div>
+                <div class="saveur">
+                    <img src="$image_4_url" alt="image de demi citrons">
+                    <input type="number" name="number" class="number">
+                </div>
             </div>
-            <div class="parfum">
-                <img src="$image_3_url">
+            <div class="donnees">
+                <div class="infos">
+                    <h3 class="commander_subtitle">Vos informations</h3>
+                    <label>Nom</label>
+                    <input type="text" name="nom" class="wpcf7-text">
+                    <label>Prénom</label>
+                    <input type="text" name="prenom" class="wpcf7-text">
+                    <label>E-mail</label>
+                    <input type="email" name="email" class="wpcf7-text">
+                </div>
+                <div class="livraison">
+                    <h3 class="commander_subtitle">Livraison</h3>
+                    <label>Adresse de livraison</label>
+                    <input type="text" name="adresse" class="wpcf7-text">
+                    <label>Code postal</label>
+                    <input type="text" name="zip" class="wpcf7-text">
+                    <label>Ville</label>
+                    <input type="text" name="city" class="wpcf7-text">
+                </div
             </div>
-            <div class="parfum">
-                <img src="$image_2_url">
-            </div>
-            <div class="parfum">
-                <img src="$image_4_url">
-            </div>
-        </div>
-        <input type="text" name="nom" value="nom">
-        <input type="text" name="prenom" value="prénom">
-        <input type="email" name"email" value="e-mail">
-        <input type="text" name "adresse" value="Adresse de livraison">
-        <input type="text" name "zip" value="Code postal">
-        <input type="text" name "city" value="Ville">
-        <input type="submit" value="Commander">
+            <button type="submit" class="wpcf7 btn">Commander</button>
+        </form>
     </div>
     EOD;
     return $formulaire;
