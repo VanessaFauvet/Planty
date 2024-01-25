@@ -14,6 +14,7 @@ register_nav_menus( array(
 	'footer' => 'Bas de page',
 ) );
 
+// Ajouter un shortcode pour le formulaire de commande //
 add_filter( 'wpcf7_form_elements', 'do_shortcode' );
 
 add_shortcode('formulaire_commande', 'formulaire_commande');
@@ -28,20 +29,24 @@ function formulaire_commande() {
             <h2 class="commander_title">Commander</h2>
             <h3 class="commander_subtitle">Votre commande</h3>
             <div id="saveurs">
-                <div class="saveur">
-                    <img src="$image_1_url" alt="image de fraises">
+                <div class="bloc_saveur">
+                    <img src="$image_1_url" alt="image de fraises" class="saveur">
+                    <p class="text_saveur">fraise<p>
                     <input type="number" name="number" class="number">
                 </div>
-                <div class="saveur">
-                    <img src="$image_3_url" alt="image de quartiers de pamplemousses">
+                <div class="bloc_saveur">
+                    <img src="$image_3_url" alt="image de quartiers de pamplemousses" class="saveur">
+                    <p class="text_saveur">pample mousse<p>
                     <input type="number" name="number" class="number">
                 </div>
-                <div class="saveur">
-                    <img src="$image_2_url" alt="image de framboises">
+                <div class="bloc_saveur">
+                    <img src="$image_2_url" alt="image de framboises" class="saveur">
+                    <p class="text_saveur">fram boise<p>
                     <input type="number" name="number" class="number">
                 </div>
-                <div class="saveur">
-                    <img src="$image_4_url" alt="image de demi citrons">
+                <div class="bloc_saveur">
+                    <img src="$image_4_url" alt="image de demi citrons" class="saveur">
+                    <p class="text_saveur">citron<p>
                     <input type="number" name="number" class="number">
                 </div>
             </div>
@@ -70,4 +75,13 @@ function formulaire_commande() {
     </div>
     EOD;
     return $formulaire;
+}
+
+// Ajouter un lien d'admin dans le menu //
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args) {
+    if ($args->theme_location == 'main' && is_user_logged_in() && current_user_can('administrator')) {
+        $items .= '<li><a href="' . admin_url() . '">Admin</a></li>';
+    }
+    return $items;
 }
