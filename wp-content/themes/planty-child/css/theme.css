@@ -13,7 +13,7 @@
 body {
     background: #fff;
     font-family: 'Syne', sans-serif;
-    max-width: 1440px;
+    min-width: 320px;
     color: black;
     margin: 0 auto;
 }
@@ -31,6 +31,11 @@ h2 {
 
 h3 {
     font-size: 30px;
+}
+
+label {
+    font-size: 20px;
+    color: white;
 }
 
 /* Header */
@@ -265,6 +270,8 @@ a {
 .wpcf7-text {
     margin-top: 13px;
     margin-bottom: 22px;
+    padding-left: 20px;
+    font-size: 20px;
 }
 
 .wpcf7-textarea {
@@ -280,6 +287,7 @@ a {
 }
 
 .wpcf7 .btn, input[type="submit"] {
+    font-size: 15px;
     display:block;
     width: 198px;
     height: 55px;
@@ -294,25 +302,42 @@ a {
     gap: none;
 }
 
+.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email {
+    margin-bottom: 22px;
+}
+
 /* Formulaire de commande */
-#command_form {
+.form_container {
     background: #3B8E46;
     padding-top: 69px;
     padding-bottom: 93px;
 }
 
+#command_form {
+    width: 860px;
+    margin: 0 auto;
+}
+
 .commander_title {
     color: #fff;
     text-align: center;
+    padding-bottom: 69px;
+    border-bottom: 1px solid white;
 }
 
 .commander_subtitle {
     color: #fff;
+    margin-top: 40px;
     margin-bottom: 29px;
-    text-align: center;
+}
+
+.donnees_subtitle {
+    color: #fff;
+    margin-bottom: 29px;
 }
 
 .infos, .livraison {
+    width: 50%;
     display: flex;
     flex-direction: column;
     margin-bottom: 44px;
@@ -332,11 +357,12 @@ a {
     width: 39px;
     height: 56px;
     margin-top: 15.29px;
+    text-align: center;
 }
 
 #saveurs {
-    width: 860px;
-    margin: 0 auto;
+    column-count: 4;
+    column-gap: 28px;
     display: flex;
     padding-bottom: 39px;
     border-bottom: 1px solid white;
@@ -349,7 +375,8 @@ a {
 }
 
 .saveur {
-    width: 90%;
+    width: 100%;
+    display: flex;
 }
 
 .text_saveur {
@@ -372,6 +399,10 @@ a {
     padding-top: 53px;
     width: 860px;
     margin: 0 auto;
+}
+
+.wpcf7-text .btn, input[type="email"] {
+    margin-bottom: 0;
 }
 
 /* Footer */
@@ -398,10 +429,20 @@ a {
 
 /***** Media queries *****/
 
-@media screen and (max-width: 1024px){
-    
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+    .main_header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 150px;
+        height: 50px;
+    }
 }
 
-@media screen and (max-width: 767px){ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     
 }
