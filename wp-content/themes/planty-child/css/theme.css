@@ -435,7 +435,10 @@ a {
         display: flex;
         flex-direction: column;
         height: auto;
-        
+    }
+
+    nav {
+        width: 100%;
     }
 
     .main_nav {
@@ -444,10 +447,12 @@ a {
 
     .main_nav li {
         margin-left: 2%;
+        margin-right: 10%;
     }
     
     .button {
-        width: 30%;
+        width: 50%;
+        margin: 0;
     }
 
     .logo {
@@ -473,11 +478,11 @@ a {
         font-size: 24px;
     }
 
-    h3 {
+    h3, .name {
         font-size: 26px;
     }
 
-    p {
+    p, .text_avis {
         font-size: 14px;
     }
 
@@ -485,25 +490,31 @@ a {
         display: flex;
         flex-direction: column;
     }
-
-    .temoin {
-        display: flex;
-    }
-
-    .temoin img {
-        width: 80%;
-    }
-
-    .name {
-        font-size: 26px;
-    }
-
-    .text_avis {
-        font-size: 14px;
-    }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    
+    nav {
+        width: 100%;
+    }
+
+    .legend {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3, .name {
+        font-size: 28px;
+    }
+
+    p, .text_avis {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
 }
