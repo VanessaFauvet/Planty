@@ -524,6 +524,8 @@ a {
     #saveurs {
         display: flex;
         flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .bloc_saveur {
@@ -531,9 +533,8 @@ a {
     }
 
     .text_saveur {
-        height: 20%;
-        transform: translate(0, 100%);
-        font-size: 26px;
+        height: 100%;
+        transform: translate(0, -30%);
     }
 
     .donnees {
