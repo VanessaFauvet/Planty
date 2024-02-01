@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Redirection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-05 09:26:01+0000\n"
+"PO-Revision-Date: 2024-01-31 10:49:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Redirection - Stable (latest release)\n"
 
@@ -1602,7 +1602,7 @@ msgstr "Surveiller les modifications de(s) %(type)s"
 msgid "IP Logging"
 msgstr "Journalisation d’IP"
 
-#: redirection-strings.php:549 redirection.js:2
+#: redirection-strings.php:549
 msgid "Geo Info"
 msgstr "Informations géographiques"
 
@@ -1694,7 +1694,7 @@ msgstr "Une heure"
 
 #: redirection-strings.php:680 redirection.js:2
 msgid "Redirect Caching"
-msgstr "Mise en cache des redirections"
+msgstr "Cache de redirection"
 
 #: redirection-strings.php:679 redirection.js:2
 msgid "How long to cache redirected 301 URLs (via \"Expires\" HTTP header)"
