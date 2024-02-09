@@ -43,23 +43,31 @@ function formulaire_commande() {
                 <h3 class="commander_subtitle">Votre commande</h3>
                 <div id="saveurs">
                     <div class="bloc_saveur">
-                        <img src="$image_1_url" alt="$image_1_alt" class="saveur">
-                        <p class="text_saveur">$image_1_texte<p>
+                        <div class="bloc_saveur_image">
+                            <img src="$image_1_url" alt="$image_1_alt" class="saveur">
+                            <p class="text_saveur">$image_1_texte<p>
+                        </div>
                         <input type="text" name="number_fraise" class="number" value="">
                     </div>
                     <div class="bloc_saveur">
-                        <img src="$image_3_url" alt="$image_3_alt" class="saveur">
-                        <p class="text_saveur">$image_3_texte<p>
+                        <div class="bloc_saveur_image">
+                            <img src="$image_3_url" alt="$image_3_alt" class="saveur">
+                            <p class="text_saveur">$image_3_texte<p>
+                        </div>
                         <input type="text" name="number_pamplemousse" class="number" value="">
                     </div>
                     <div class="bloc_saveur">
-                        <img src="$image_2_url" alt="$image_2_alt" class="saveur">
-                        <p class="text_saveur">$image_2_texte<p>
+                        <div class="bloc_saveur_image">
+                            <img src="$image_2_url" alt="$image_2_alt" class="saveur">
+                            <p class="text_saveur">$image_2_texte<p>
+                        </div>
                         <input type="text" name="number_framboise" class="number" value="">
                     </div>
                     <div class="bloc_saveur">
-                        <img src="$image_4_url" alt="$image_4_alt" class="saveur">
-                        <p class="text_saveur">$image_4_texte<p>
+                        <div class="bloc_saveur_image">
+                            <img src="$image_4_url" alt="$image_4_alt" class="saveur">
+                            <p class="text_saveur">$image_4_texte<p>
+                        </div>
                         <input type="text" name="number_citron" class="number" value="">
                     </div>
                 </div>
@@ -99,3 +107,5 @@ function add_admin_link($items, $args) {
     }
     return $items;
 }
+
+add_filter('wpcf7_autop_or_not', '__return_false');

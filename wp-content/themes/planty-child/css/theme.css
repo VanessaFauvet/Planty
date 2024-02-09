@@ -374,6 +374,10 @@ a {
     align-items: center;
 }
 
+.bloc_saveur_image {
+    position: relative;
+}
+
 .saveur {
     width: 100%;
     display: flex;
@@ -381,8 +385,8 @@ a {
 
 .text_saveur {
     display: flex;
-    width: 175.559px;
-    height: 56.885px;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -391,7 +395,8 @@ a {
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
-    transform: translate(0, 60%);
+    top: 0;
+    left: 0;
 }
 
 .donnees {
@@ -533,8 +538,7 @@ a {
     }
 
     .text_saveur {
-        height: 100%;
-        transform: translate(0, -30%);
+        font-size: 30px;
     }
 
     .donnees {
@@ -588,11 +592,6 @@ a {
     #saveurs {
         width: 90%;
         margin: 0 auto;
-    }
-
-    .text_saveur {
-        height: 20%;
-        transform: translate(0, 20%);
     }
 
     #command_form {
