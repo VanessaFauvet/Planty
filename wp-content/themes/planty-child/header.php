@@ -10,6 +10,7 @@
     <header class="main_header">
         <a href="<?php echo home_url('/');?>" class="identity">
 			<img class="logo" src="<?= get_stylesheet_directory_uri()."/images/logo.png" ?>">
+            <img class="logo_device" src="<?= get_stylesheet_directory_uri()."/images/vector.png" ?>">
         </a>
         <div class="main_nav">
             <nav>
@@ -18,7 +19,6 @@
                     'container' => 'ul', // afin d'éviter d'avoir une div autour
                 )); ?>
             </nav>
-            <input class="button" type="button" value="Commander" OnClick="window.location.href='Precommande'">
         </div>
         
     </header>

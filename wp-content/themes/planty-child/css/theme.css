@@ -39,7 +39,6 @@ label {
 }
 
 /* Header */
-
 .main_header {
     width: 100%;
     background: #fff;
@@ -51,6 +50,7 @@ label {
 
 a {
     color: inherit;
+    font-size: 1rem;
 }
 
 .identity {
@@ -64,27 +64,35 @@ a {
     margin: 0 9px 0 37px;
 }
 
+.logo_device {
+    display: none;
+}
+
 .main_nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .main_nav ul {
     display: flex;
+    flex-wrap: nowrap;
 }
 
 .main_nav li {
-    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
 }
 
-.button {
+#menu-item-479 {
     background: #DC9F96;
-    width: 236px;
-    height: 80px;
     color: white;
-    margin-left: 60px;
-    border: 0;
+    order: 3;
+    height: 80px;
+    padding: 30px 61px 31px 61px;
+}
+
+#menu-item-479:hover {
+    background: #C02E44;
 }
 
 /* Accueil */
@@ -284,6 +292,17 @@ a {
     background-image: url('../images/Group-16.png');
     background-repeat: no-repeat;
     background-position: bottom 47px left -30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire_contact form {
+    width: 383px;
+}
+
+.formulaire_contact label {
+    color: #000;
+    font-size: 20px;
 }
 
 .wpcf7 .btn, input[type="submit"] {
@@ -298,8 +317,20 @@ a {
     margin: auto;
 }
 
+.wpcf7 .btn:hover, input[type="submit"]:hover {
+    font-size: 15px;
+    display:block;
+    width: 198px;
+    height: 55px;
+    border: 0px;
+    border-radius: 5px;
+    background: #C02E44;
+    color: #fff;
+    margin: auto;
+}
+
 :where(.is-layout-flex) {
-    gap: none;
+    gap: 0;
 }
 
 .wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email {
@@ -433,36 +464,100 @@ a {
 
 /***** Media queries *****/
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .legend {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3, .name {
+        font-size: 28px;
+    }
+
+    p, .text_avis {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .bloc_membres {
+        display: flex;
+    }
+
+    #saveurs {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #command_form {
+        width: 100%;
+    }
+
+    .donnees {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .wpcf7-text, .wpcf7-textarea {
+        width: 100%;
+    }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
     .main_header {
+        width: 100%;
+        height: 80px;
         display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    .main_nav {
-        width: 100%;
-    }
-
-    .main_nav li {
-        margin-left: 2%;
-        margin-right: 10%;
+        align-items: center;
     }
     
-    .button {
-        width: 50%;
-        margin: 0;
+    a {
+        font-size: 0.8rem;
+    }
+    
+    .identity {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        display: none;
     }
 
-    .logo {
-        width: 201px;
-        height: 19px;
-        margin: 20px 9px 20px 37px;
+    .logo_device {
+        display: block;
+        width: 25%;
+        margin: 10px 20px 10px 10px;
+    }
+    
+    .main_nav {
+        display: flex;
+    }
+    
+    .main_nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .main_nav li {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+    #menu-item-479 {
+        background: #DC9F96;
+        color: white;
+        order: 3;
+        height: 80px;
+        padding: 10px 41px 11px 41px;
     }
 
     .groupe1, .groupe2 {
@@ -493,6 +588,10 @@ a {
     .blocs_avis {
         display: flex;
         flex-direction: column;
+    }
+
+    .temoin {
+        margin-bottom: 40px;
     }
 
     .bloc_rencontrer {
@@ -557,53 +656,12 @@ a {
         border-bottom: 1px solid white;
         padding-bottom: 45px;
     }
-}
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    nav {
+    .formulaire_contact form {
         width: 100%;
     }
 
-    .legend {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    h3, .name {
-        font-size: 28px;
-    }
-
-    p, .text_avis {
-        font-size: 16px;
-    }
-
-    .name {
-        font-size: 22px;
-    }
-
-    .bloc_membres {
-        display: flex;
-    }
-
-    #saveurs {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    #command_form {
-        width: 100%;
-    }
-
-    .donnees {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .wpcf7-text, .wpcf7-textarea {
-        width: 100%;
+    .bloc_membres .wp-block-column.is-vertically-aligned-top.is-layout-flow.wp-block-column-is-layout-flow {
+        margin-bottom: 40px;
     }
 }
